@@ -24,3 +24,5 @@ with open("players.json", "w", encoding="utf-8") as f:
     json.dump(formatted_players, f, indent=2, ensure_ascii=False)
 
 print(f"✅ {len(formatted_players)} joueurs écrits dans players.json")
+players = client.get_players(limit=30)
+print(players)  # 👈 pour voir ce qui est réellement récupéré
