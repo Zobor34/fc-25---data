@@ -2,30 +2,29 @@ name: Update players.json
 
 on:
   schedule:
-    - cron: '0 7 * * *'  # tous les jours à 07h UTC
-  workflow_dispatch:
+    - cron: '0 7 * * *'  # Tous les jours à 07:00 UTC
+  workflow_dispatch:     # Permet de lancer manuellement
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-    - name: Run Python script
-      run: python generate_players.py
+      - name: Run Python script
+        run: python generate_players.py
 
-    - name: Commit and push
-      run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
-        git add players.json
-        git commit -m "🔄 MAJ auto players.json"
-        git push
-
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add players.json
+          git commit -m "🔄 MAJ auto players.json" || echo "Aucun changement"
+          git push
