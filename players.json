@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Mbappé",
+    "overall": 92,
+    "position": "ST",
+    "club": "PSG",
+    "league": "Ligue 1",
+    "nation": "France",
+    "version": "TOTY"
+  },
+  {
+    "id": 2,
+    "name": "Bellingham",
+    "overall": 90,
+    "position": "CAM",
+    "club": "Real Madrid",
+    "league": "LaLiga",
+    "nation": "England",
+    "version": "TOTS"
+  }
+]
