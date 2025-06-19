@@ -2,7 +2,7 @@ name: Update players.json
 
 on:
   schedule:
-    - cron: '0 7 * * *'  # tous les jours à 07:00 UTC
+    - cron: '0 7 * * *'  # Tous les jours à 07h UTC
   workflow_dispatch:
 
 jobs:
