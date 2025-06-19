@@ -24,3 +24,4 @@ if __name__ == "__main__":
     print("[INFO] Total joueurs récupérés :", len(players))
     with open("players.json", "w", encoding="utf-8") as f:
         json.dump(players, f, indent=2, ensure_ascii=False)
+print("[DEBUG] JSON brut :", data)  # juste après r.json()
