@@ -1,1 +1,1 @@
-fut-api
+git+https://github.com/MrNaughtZero/Fut-Api.git
