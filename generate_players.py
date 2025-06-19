@@ -1,5 +1,5 @@
 import json
-from fut_api import FutApiClient
+from futapi.fut_api import FutApiClient
 
 client = FutApiClient(platform="ps")  # ou "xbox" ou "pc"
 
